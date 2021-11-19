@@ -1,0 +1,12 @@
+*.swf
+*.air
+*.ipa
+*.apk
+*.ipch
+*.obj
+*.tlog
+*.user
+*.filters
+*.vs
+
+Debug/
