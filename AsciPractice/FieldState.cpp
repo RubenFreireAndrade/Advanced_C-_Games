@@ -14,8 +14,9 @@ FieldState::~FieldState()
 
 void FieldState::Update()
 {
-	system("CLS");
+	ClearScreen();
 	map->Draw();
+	std::cout << "You can access your inventory by typing inv " << std::endl;
 	std::cout << "You are on a Field." << std::endl;
 	std::cout << "===========================================" << std::endl;
 
@@ -25,7 +26,7 @@ void FieldState::Update()
 	std::cout << "2. No" << std::endl;
 	std::cin >> playerChoice;
 
-	system("CLS");
+	ClearScreen();
 	std::cout << "Seems like nothing is here!" << std::endl;
 	std::cout << "========================================" << std::endl;
 }

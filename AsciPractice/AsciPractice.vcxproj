@@ -132,13 +132,13 @@
     <ClCompile Include="GameLoopManager.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="InventoryState.cpp" />
-    <ClCompile Include="Locations.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Maps.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerSelector.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="VillageState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BattleSystem.h" />
@@ -150,12 +150,12 @@
     <ClInclude Include="GameLoopManager.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="InventoryState.h" />
-    <ClInclude Include="Locations.h" />
     <ClInclude Include="Maps.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerSelector.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
+    <ClInclude Include="VillageState.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="mapField.txt" />

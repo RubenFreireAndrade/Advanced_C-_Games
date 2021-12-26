@@ -4,7 +4,6 @@
 
 #include"Maps.h"
 #include"Enemy.h"
-#include"Locations.h"
 #include"PlayerSelector.h"
 #include"Inventory.h"
 #include"Player.h"
@@ -21,15 +20,13 @@ public:
 
 	void GameLoop();
 
-	void CreateEnemy();
+	bool isGameRunning = true;
 
 private:
 
 	PlayerSelector playerSelector;
-	//Locations locations;
 	Enemy* enemy;
 	Maps* maps;
-	//Inventory inventory;
 	Player* player;
 	StateManager* stateManager;
 };

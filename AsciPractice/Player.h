@@ -10,16 +10,17 @@ public:
 	~Player();
 
 	bool IsAlive();
-	bool IsPlayerInventory();
 
 	void ReceiveDamage(int dmg);
 	void ShowPlayerStats();
 	void ShowPlayerInventory();
 	void Pickup(std::string item);
+	void MaxHeal();
 
 	int health, attackPwr;
 	int damage;
 	int currentHP;
+	int maxHP;
 
 private:
 

@@ -18,6 +18,10 @@ GameLoopManager::~GameLoopManager()
 
 void GameLoopManager::GameLoop()
 {
-	//inventory.CreateItems();
 	stateManager->Update();
+	if (!player->IsAlive())
+	{
+		isGameRunning = false;
+	}
+	
 }

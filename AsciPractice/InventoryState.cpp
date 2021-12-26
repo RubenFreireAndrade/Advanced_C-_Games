@@ -7,7 +7,7 @@ InventoryState::InventoryState(Player* p)
 
 void InventoryState::Update()
 {
-	system("CLS");
+	ClearScreen();
 	std::cout << "Player inventory contains:" << std::endl;
 	std::cout << "===========================================" << std::endl;
 	player->ShowPlayerInventory();

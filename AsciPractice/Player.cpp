@@ -4,6 +4,7 @@ Player::Player(Player* p, int hp, int dmg)
 {
 	damage = dmg;
 	currentHP = hp;
+	maxHP = hp;
 	player = p;
 	inventory = new Inventory();
 }
@@ -16,12 +17,6 @@ Player::~Player()
 bool Player::IsAlive()
 {
 	return currentHP > 0;
-}
-
-bool Player::IsPlayerInventory()
-{
-	//player->inventory->ShowItems();
-	return false;
 }
 
 void Player::ReceiveDamage(int dmg)
@@ -44,4 +39,9 @@ void Player::ShowPlayerInventory()
 void Player::Pickup(std::string item)
 {
 	inventory->Additem(item);
+}
+
+void Player::MaxHeal()
+{
+	currentHP = maxHP;
 }

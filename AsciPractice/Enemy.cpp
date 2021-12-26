@@ -25,46 +25,6 @@ void Enemy::ShowEnemy()
 	std::cout << "	And damage of: " << damage << std::endl;
 }
 
-void Enemy::CreateEnemy()
-{
-	srand(time(0));
-	int generateEnemy = rand() % 4 + 1;
-
-	switch (generateEnemy)
-	{
-	case 1:
-
-		new Enemy("Pikachu", 20, 10);
-
-		break;
-
-	case 2:
-
-		new Enemy("Wolf", 50, 10);
-
-		break;
-
-	case 3:
-
-		new Enemy("Goblin", 30, 20);
-
-		break;
-
-	case 4:
-
-		new Enemy("Slime", 10, 20);
-
-		break;
-
-	default:
-
-		new Enemy("Broken Enemy", 1, 1);
-
-		break;
-	}
-	//ShowEnemy();
-}
-
 void Enemy::ReceiveDamage(int dmg)
 {
 	currentHP = currentHP - dmg;

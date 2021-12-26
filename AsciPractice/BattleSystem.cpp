@@ -10,7 +10,7 @@ BattleSystem::~BattleSystem()
 
 }
 
-void BattleSystem::Battle(Enemy* enemy, Player* player)
+bool BattleSystem::Battle(Enemy* enemy, Player* player)
 {
 	while (enemy->IsAlive() && player->IsAlive())
 	{
@@ -29,5 +29,11 @@ void BattleSystem::Battle(Enemy* enemy, Player* player)
 	{
 		std::cout << " Player Won! " << std::endl;
 		std::cout << player->currentHP << " HP left " << std::endl;
+		return true;
+	}
+	else
+	{
+		std::cout << "YOU DIED!" << std::endl;
+		return false;
 	}
 }

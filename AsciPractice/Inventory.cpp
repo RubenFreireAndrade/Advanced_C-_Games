@@ -2,7 +2,7 @@
 
 Inventory::Inventory()
 {
-
+	inventory.begin();
 }
 
 Inventory::~Inventory()
@@ -20,5 +20,13 @@ void Inventory::ShowItems()
 
 void Inventory::Additem(std::string newItem)
 {
-	inventory.insert(inventory.begin(), newItem);
+	auto name = std::find(inventory.begin(), inventory.end(), newItem);
+	if (name != inventory.end())
+	{
+		std::cout << "You already have that item in Inventory" << std::endl;
+	}
+	else
+	{
+		inventory.push_back(newItem);
+	}
 }

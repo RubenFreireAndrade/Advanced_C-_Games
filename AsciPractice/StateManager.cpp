@@ -23,8 +23,6 @@ void StateManager::Update()
 	{
 		// Before changing to next state. saving currentState data to return back to previous.
 		nextState->SetPreviousState(currentState);
-		// Freeing up memeory by deleting pointer.
-		//delete currentState;
 		currentState = nextState;
 	}
 }

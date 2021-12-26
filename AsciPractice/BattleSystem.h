@@ -15,7 +15,7 @@ public:
 	BattleSystem();
 	~BattleSystem();
 
-	void Battle(Enemy* enemy, Player* player);
+	bool Battle(Enemy* enemy, Player* player);
 
 private:
 

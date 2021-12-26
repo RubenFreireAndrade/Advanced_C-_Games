@@ -16,9 +16,15 @@ public:
 
 	virtual void Update() = 0;
 	virtual State* ChangeState() = 0;
+
 	State* GlobalChangeState();
-	void SetPreviousState(State* state);
 	Enemy* CreateEnemy();
+
+	void SetPreviousState(State* state);
+	void PauseGameplay();
+	void ClearScreen();
+
+	void FightChoices();
 
 protected:
 

@@ -10,7 +10,6 @@ public:
 	~Enemy();
 
 	void ShowEnemy();
-	void CreateEnemy();
 	void ReceiveDamage(int dmg);
 
 	bool IsAlive();

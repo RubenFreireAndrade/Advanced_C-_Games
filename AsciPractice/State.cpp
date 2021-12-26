@@ -20,7 +20,7 @@ Enemy* State::CreateEnemy()
 	{
 	case 1:
 
-		return new Enemy("Pikachu", 20, 10);
+		return new Enemy("Pikachu", 30, 20);
 
 	case 2:
 
@@ -32,12 +32,31 @@ Enemy* State::CreateEnemy()
 
 	case 4:
 
-		return new Enemy("Slime", 10, 20);
+		return new Enemy("Slime", 30, 20);
 
 	default:
 
 		return new Enemy("Broken Enemy", 1, 1);
 	}
+}
+
+void State::PauseGameplay()
+{
+	system("pause");
+}
+
+void State::ClearScreen()
+{
+	system("CLS");
+}
+
+void State::FightChoices()
+{
+	std::cout << "Fight?" << std::endl;
+	std::cout << "===========================================" << std::endl;
+	std::cout << "1. Fight" << std::endl;
+	std::cout << "2. Run" << std::endl;
+	std::cin >> playerChoice;
 }
 
 void State::SetPreviousState(State* state)

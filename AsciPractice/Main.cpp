@@ -7,14 +7,9 @@
 int main()
 {
 	GameLoopManager gameLoopManager;
-	
-	bool isGameRunning = true;
-
-	while (isGameRunning)
+	while (gameLoopManager.isGameRunning)
 	{
 		gameLoopManager.GameLoop();
 	}
-
-	system("pause");
 	return 0;
 }
