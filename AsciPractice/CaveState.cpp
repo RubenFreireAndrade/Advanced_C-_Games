@@ -14,6 +14,7 @@ void CaveState::Update()
 	std::cout << "===========================================" << std::endl;
 	Enemy* enemy = CreateEnemy();
 	enemy->ShowEnemy();
+	std::cout << "Player has: " << player->currentHP << "HP left" << std::endl;
 	FightChoices();
 
 	if (playerChoice == "1")
@@ -22,7 +23,7 @@ void CaveState::Update()
 		PauseGameplay();
 
 		ClearScreen();
-		std::cout << enemy->GetEnemyName() << "dropped a HP Potion and Player receives Potion" << std::endl;
+		std::cout << enemy->GetEnemyName() << " dropped a HP Potion and Player receives Potion" << std::endl;
 		player->Pickup("Potion");
 		std::cout <<"Player has: "<< player->currentHP << "HP left" << std::endl;
 

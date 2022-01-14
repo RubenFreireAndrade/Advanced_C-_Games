@@ -38,10 +38,21 @@ void Player::ShowPlayerInventory()
 
 void Player::Pickup(std::string item)
 {
-	inventory->Additem(item);
+	inventory->AddItem(item);
 }
 
 void Player::MaxHeal()
 {
 	currentHP = maxHP;
+}
+
+void Player::UseItem(std::string playerChoice)
+{
+	inventory->CheckItem(playerChoice);
+	if (inventory->GetChosenItem() == "Potion")
+	{
+		MaxHeal();
+		std::cout << "Player is now: " << currentHP << " HP" << std::endl;
+		system("pause");
+	}
 }

@@ -4,11 +4,11 @@
 
 #include"Maps.h"
 #include"Enemy.h"
-#include"PlayerSelector.h"
 #include"Inventory.h"
 #include"Player.h"
 #include"StateManager.h"
 #include"FieldState.h"
+#include"CharacterCreationState.h"
 
 class GameLoopManager
 {
@@ -19,15 +19,16 @@ public:
 	~GameLoopManager();
 
 	void GameLoop();
+	std::string SetCmdColour(const char* systemColour);
 
 	bool isGameRunning = true;
 
 private:
 
-	PlayerSelector playerSelector;
 	Enemy* enemy;
 	Maps* maps;
 	Player* player;
 	StateManager* stateManager;
+	Characters* characters;
 };
 

@@ -1,5 +1,6 @@
 #pragma once
 #include"State.h"
+#include"VillageState.h"
 
 class DungeonState : public State
 {

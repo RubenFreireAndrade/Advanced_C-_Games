@@ -2,12 +2,12 @@
 
 Inventory::Inventory()
 {
-	inventory.begin();
+	
 }
 
 Inventory::~Inventory()
 {
-
+	
 }
 
 void Inventory::ShowItems()
@@ -18,7 +18,7 @@ void Inventory::ShowItems()
 	}
 }
 
-void Inventory::Additem(std::string newItem)
+void Inventory::AddItem(std::string newItem)
 {
 	auto name = std::find(inventory.begin(), inventory.end(), newItem);
 	if (name != inventory.end())
@@ -29,4 +29,25 @@ void Inventory::Additem(std::string newItem)
 	{
 		inventory.push_back(newItem);
 	}
+}
+
+void Inventory::CheckItem(std::string playerChoice)
+{
+	itemChosen = playerChoice;
+	auto item = std::find(inventory.begin(), inventory.end(), itemChosen);
+	if (item != inventory.end())
+	{
+		std::cout << "Player consumed: " << itemChosen << std::endl;
+		system("pause");
+	}
+	else
+	{
+		std::cout << "This " << itemChosen << " does not exist. Choose another item" << std::endl;
+		system("pause");
+	}
+}
+
+std::string Inventory::GetChosenItem()
+{
+	return std::string(itemChosen);
 }

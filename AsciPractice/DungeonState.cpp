@@ -27,10 +27,10 @@ void DungeonState::Update()
 }
 
 State* DungeonState::ChangeState()
-{/*
+{
     if (playerChoice == "1")
     {
         return new VillageState(player);
-    }*/
+    }
     return nullptr;
 }

@@ -27,6 +27,7 @@ bool BattleSystem::Battle(Enemy* enemy, Player* player)
 
 	if (player->IsAlive())
 	{
+		std::cout << "=====================================" << std::endl;
 		std::cout << " Player Won! " << std::endl;
 		std::cout << player->currentHP << " HP left " << std::endl;
 		return true;

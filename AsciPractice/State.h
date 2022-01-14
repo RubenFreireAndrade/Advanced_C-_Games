@@ -23,14 +23,15 @@ public:
 	void SetPreviousState(State* state);
 	void PauseGameplay();
 	void ClearScreen();
-
 	void FightChoices();
 
 protected:
 
 	std::string playerChoice;
 
+	//CharacterCreationState* characterCreationState;
 	BattleSystem* battleSystem;
+	//Characters* characters;
 	State* previousState;
 	Player* player;
 	Enemy* enemy;

@@ -1,5 +1,4 @@
 #pragma once
-#include"PlayerSelector.h"
 #include"Inventory.h"
 
 class Player
@@ -16,6 +15,7 @@ public:
 	void ShowPlayerInventory();
 	void Pickup(std::string item);
 	void MaxHeal();
+	void UseItem(std::string playerChoice);
 
 	int health, attackPwr;
 	int damage;
@@ -26,6 +26,5 @@ private:
 
 	Player* player;
 	Inventory* inventory;
-	PlayerSelector playerSelector;
 };
 

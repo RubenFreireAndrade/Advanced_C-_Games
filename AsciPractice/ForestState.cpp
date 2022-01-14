@@ -8,7 +8,7 @@ ForestState::ForestState(Player* p)
 
 void ForestState::Update()
 {
-	system("CLS");
+	ClearScreen();
 	map->Draw();
 	std::cout << "You are in a Dark Forest." << std::endl;
 	std::cout << "===========================================" << std::endl;

@@ -20,7 +20,7 @@ void Enemy::ShowEnemy()
 {
 	std::cout << "======================================================================" << std::endl;
 
-	std::cout << "A" << monsterName << " Appeared!" << std::endl;
+	std::cout << "A " << monsterName << " Appeared!" << std::endl;
 	std::cout << "	With: " << currentHP << "HP" << std::endl;
 	std::cout << "	And damage of: " << damage << std::endl;
 }

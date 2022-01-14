@@ -125,6 +125,8 @@
   <ItemGroup>
     <ClCompile Include="BattleSystem.cpp" />
     <ClCompile Include="CaveState.cpp" />
+    <ClCompile Include="CharacterCreationState.cpp" />
+    <ClCompile Include="Characters.cpp" />
     <ClCompile Include="DungeonState.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FieldState.cpp" />
@@ -135,7 +137,6 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Maps.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayerSelector.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="VillageState.cpp" />
@@ -143,6 +144,8 @@
   <ItemGroup>
     <ClInclude Include="BattleSystem.h" />
     <ClInclude Include="CaveState.h" />
+    <ClInclude Include="CharacterCreationState.h" />
+    <ClInclude Include="Characters.h" />
     <ClInclude Include="DungeonState.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="FieldState.h" />
@@ -152,7 +155,6 @@
     <ClInclude Include="InventoryState.h" />
     <ClInclude Include="Maps.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerSelector.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
     <ClInclude Include="VillageState.h" />
