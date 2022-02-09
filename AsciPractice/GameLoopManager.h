@@ -24,11 +24,6 @@ public:
 	bool isGameRunning = true;
 
 private:
-
-	Enemy* enemy;
-	Maps* maps;
-	Player* player;
 	StateManager* stateManager;
-	Characters* characters;
 };
 

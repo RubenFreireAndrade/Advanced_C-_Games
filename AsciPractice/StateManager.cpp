@@ -26,3 +26,8 @@ void StateManager::Update()
 		currentState = nextState;
 	}
 }
+
+bool StateManager::IsStatePlayerAlive()
+{
+	return currentState->IsStatePlayerAlive();
+}

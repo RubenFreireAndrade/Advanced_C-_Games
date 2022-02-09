@@ -59,6 +59,11 @@ void State::FightChoices()
 	std::cin >> playerChoice;
 }
 
+bool State::IsStatePlayerAlive()
+{
+	return player->IsAlive();
+}
+
 void State::SetPreviousState(State* state)
 {
 	previousState = state;

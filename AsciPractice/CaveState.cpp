@@ -14,7 +14,7 @@ void CaveState::Update()
 	std::cout << "===========================================" << std::endl;
 	Enemy* enemy = CreateEnemy();
 	enemy->ShowEnemy();
-	std::cout << "Player has: " << player->currentHP << "HP left" << std::endl;
+	std::cout << "Player has: " << player->currentHp << "HP left" << std::endl;
 	FightChoices();
 
 	if (playerChoice == "1")
@@ -25,7 +25,7 @@ void CaveState::Update()
 		ClearScreen();
 		std::cout << enemy->GetEnemyName() << " dropped a HP Potion and Player receives Potion" << std::endl;
 		player->Pickup("Potion");
-		std::cout <<"Player has: "<< player->currentHP << "HP left" << std::endl;
+		std::cout <<"Player has: "<< player->currentHp << "HP left" << std::endl;
 
 		std::cout << "Would you like to use HP Potion?" << std::endl;
 		std::cout << " Yes" << std::endl;
@@ -34,11 +34,11 @@ void CaveState::Update()
 		if (playerChoice == "Yes" || playerChoice == "yes")
 		{
 			player->MaxHeal();
-			std::cout << "Player has: " << player->currentHP << " left" << std::endl;
+			std::cout << "Player has: " << player->currentHp << " left" << std::endl;
 		}
 		else if (playerChoice == "No" || playerChoice == "no")
 		{
-			std::cout << "Player has: " << player->currentHP << " left" << std::endl;
+			std::cout << "Player has: " << player->currentHp << " left" << std::endl;
 		}
 		PauseGameplay();
 

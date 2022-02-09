@@ -1,6 +1,5 @@
 #pragma once
 #include"State.h"
-#include"Characters.h"
 #include"FieldState.h"
 
 #include<vector>
@@ -15,11 +14,10 @@ public:
 	{
 		SWORDSMAN,
 		MAGE,
-		ROGUE,
-		TOTAL
+		ROGUE
 	};
 
-	CharacterCreationState(Player* p);
+	CharacterCreationState();
 	~CharacterCreationState();
 
 	// Inherited via State
@@ -32,19 +30,15 @@ public:
 
 private:
 
-	std::vector<Characters*> characters;
-	std::vector<Characters*>::iterator iter;
+	std::vector<Character*> characters;
+	std::vector<Character*>::iterator iter;
 
 	std::string numbers[3] = { "First", "Second", "Third" };
 	std::string chosenCharacter;
-	
-	Player* player;
-	FieldState* fieldState;
-	Characters* character;
 
 	// Creating characters.
-	Characters* swordsman;
-	Characters* mage;
-	Characters* rogue;
+	Player* swordsman;
+	Player* mage;
+	Player* rogue;
 };
 

@@ -21,7 +21,7 @@ void ForestState::Update()
 
 	if (playerChoice == "1")
 	{
-		player->Pickup("Sword");
+		player->PickupStarterWeapon(player->CheckWeapon());
 	}
 	else
 	{

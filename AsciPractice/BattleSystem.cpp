@@ -29,7 +29,7 @@ bool BattleSystem::Battle(Enemy* enemy, Player* player)
 	{
 		std::cout << "=====================================" << std::endl;
 		std::cout << " Player Won! " << std::endl;
-		std::cout << player->currentHP << " HP left " << std::endl;
+		std::cout << player->currentHp << " HP left " << std::endl;
 		return true;
 	}
 	else

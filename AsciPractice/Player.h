@@ -1,15 +1,17 @@
 #pragma once
 #include"Inventory.h"
+#include"Character.h"
 
-class Player
+class Player : public Character
 {
 public:
 
-	Player(Player* p, int hp, int dmg);
+	Player(std::string name, int mHp, int cHp, int dmg);
 	~Player();
 
 	bool IsAlive();
 
+	// Player Functions
 	void ReceiveDamage(int dmg);
 	void ShowPlayerStats();
 	void ShowPlayerInventory();
@@ -17,14 +19,13 @@ public:
 	void MaxHeal();
 	void UseItem(std::string playerChoice);
 
-	int health, attackPwr;
-	int damage;
-	int currentHP;
-	int maxHP;
+	std::string CheckWeapon();
+	void PickupStarterWeapon(std::string weapon);
 
 private:
 
 	Player* player;
 	Inventory* inventory;
+	Character* character;
 };
 

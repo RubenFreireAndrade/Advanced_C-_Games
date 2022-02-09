@@ -1,11 +1,12 @@
 #include "CharacterCreationState.h"
 
-CharacterCreationState::CharacterCreationState(Player* p)
+CharacterCreationState::CharacterCreationState()
 {
-    player = p;
-    swordsman = new Characters("Swordsman", 50, 50, 10);
-    mage = new Characters("Mage", 30, 30, 30);
-    rogue = new Characters("Rogue", 30, 30, 20);
+    swordsman = new Player("Swordsman", 50, 50, 10);
+    mage = new Player("Mage", 30, 30, 30);
+    rogue = new Player("Rogue", 30, 30, 20);
+
+    player = swordsman;
 
     characters.push_back(swordsman);
     characters.push_back(mage);
@@ -14,9 +15,7 @@ CharacterCreationState::CharacterCreationState(Player* p)
 
 CharacterCreationState::~CharacterCreationState()
 {
-    delete swordsman;
-    delete mage;
-    delete rogue;
+    
 }
 
 void CharacterCreationState::Update()
@@ -32,15 +31,21 @@ State* CharacterCreationState::ChangeState()
     switch (ConvertString(playerChoice))
     {
     case SWORDSMAN:
-        return new FieldState(player);
+        return new FieldState(swordsman);
         break;
 
     case MAGE:
-        return new FieldState(player);
+        return new FieldState(mage);
         break;
 
     case ROGUE:
-        return new FieldState(player);
+        return new FieldState(rogue);
+        break;
+
+    default:
+        ClearScreen();
+        std::cout << "Failed to select character. Try again!" << std::endl;
+        std::cout << "===================================================" << std::endl;
         break;
     }
     return nullptr;
@@ -51,15 +56,11 @@ void CharacterCreationState::ShowCharacterStats()
     for (iter = characters.begin(); iter < characters.end(); iter++) 
     {
         std::cout << "===================================================" << std::endl;
-        
-        /*for (auto i = 0; i < 3; i++)
-        {
-            std::cout << numbers[i] << " Character" << std::endl;
-        }*/
         std::cout << " Name: " << (*iter)->characterName << std::endl;
         std::cout << " HP: " << (*iter)->maxHp << std::endl;
         std::cout << " Damage: " << (*iter)->damage << std::endl;
     }
+    std::cout << "\n\n";
 }
 
 int CharacterCreationState::ConvertString(std::string choice)

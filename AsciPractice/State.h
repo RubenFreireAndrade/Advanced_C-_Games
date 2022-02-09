@@ -24,14 +24,13 @@ public:
 	void PauseGameplay();
 	void ClearScreen();
 	void FightChoices();
+	bool IsStatePlayerAlive();
 
 protected:
 
 	std::string playerChoice;
 
-	//CharacterCreationState* characterCreationState;
 	BattleSystem* battleSystem;
-	//Characters* characters;
 	State* previousState;
 	Player* player;
 	Enemy* enemy;

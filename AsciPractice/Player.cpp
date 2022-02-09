@@ -1,33 +1,35 @@
 #include "Player.h"
 
-Player::Player(Player* p, int hp, int dmg)
+Player::Player(std::string name, int mHp, int cHp, int dmg)
 {
+	characterName = name;
+	maxHp = mHp;
+	currentHp = cHp;
 	damage = dmg;
-	currentHP = hp;
-	maxHP = hp;
-	player = p;
+
 	inventory = new Inventory();
+	character = new Character();
 }
 
 Player::~Player()
 {
-
+	
 }
 
 bool Player::IsAlive()
 {
-	return currentHP > 0;
+	return currentHp > 0;
 }
 
 void Player::ReceiveDamage(int dmg)
 {
-	currentHP = currentHP - dmg;
+	currentHp = currentHp - dmg;
 }
 
 void Player::ShowPlayerStats()
 {
 	std::cout << "============================================" << std::endl;
-	std::cout << "	HP:	" << currentHP << std::endl;
+	std::cout << "	HP:	" << currentHp << std::endl;
 	std::cout << "	Damage:	" << damage << std::endl;
 }
 
@@ -43,7 +45,7 @@ void Player::Pickup(std::string item)
 
 void Player::MaxHeal()
 {
-	currentHP = maxHP;
+	currentHp = maxHp;
 }
 
 void Player::UseItem(std::string playerChoice)
@@ -52,7 +54,19 @@ void Player::UseItem(std::string playerChoice)
 	if (inventory->GetChosenItem() == "Potion")
 	{
 		MaxHeal();
-		std::cout << "Player is now: " << currentHP << " HP" << std::endl;
+		std::cout << "Player is now: " << currentHp << " HP" << std::endl;
 		system("pause");
 	}
+}
+
+std::string Player::CheckWeapon()
+{
+	if (characterName == "Swordsman") return std::string("Sword");
+	if (characterName == "Mage") return std::string("Staff");
+	if (characterName == "Rogue") return std::string("Dagger");
+}
+
+void Player::PickupStarterWeapon(std::string weapon)
+{
+	inventory->AddItem(weapon);
 }

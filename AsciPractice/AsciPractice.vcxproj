@@ -126,7 +126,7 @@
     <ClCompile Include="BattleSystem.cpp" />
     <ClCompile Include="CaveState.cpp" />
     <ClCompile Include="CharacterCreationState.cpp" />
-    <ClCompile Include="Characters.cpp" />
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="DungeonState.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FieldState.cpp" />
@@ -145,7 +145,7 @@
     <ClInclude Include="BattleSystem.h" />
     <ClInclude Include="CaveState.h" />
     <ClInclude Include="CharacterCreationState.h" />
-    <ClInclude Include="Characters.h" />
+    <ClInclude Include="Character.h" />
     <ClInclude Include="DungeonState.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="FieldState.h" />

@@ -16,7 +16,8 @@ void FieldState::Update()
 {
 	ClearScreen();
 	map->Draw();
-	std::cout << "You can access your inventory by typing inv " << std::endl;
+	std::cout << "You can access your inventory by typing: inv " << std::endl;
+	std::cout << "===========================================" << std::endl;
 	std::cout << "You are on a Field." << std::endl;
 	std::cout << "===========================================" << std::endl;
 
