@@ -15,7 +15,6 @@ void DungeonState::Update()
     Enemy* enemy = CreateEnemy();
     enemy->ShowEnemy();
     FightChoices();
-
     if (playerChoice == "1")
     {
         battleSystem->Battle(enemy, player);

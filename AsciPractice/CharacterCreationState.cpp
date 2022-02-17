@@ -5,7 +5,6 @@ CharacterCreationState::CharacterCreationState()
     swordsman = new Player("Swordsman", 50, 50, 10);
     mage = new Player("Mage", 30, 30, 30);
     rogue = new Player("Rogue", 30, 30, 20);
-
     player = swordsman;
 
     characters.push_back(swordsman);

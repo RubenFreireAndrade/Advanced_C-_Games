@@ -6,14 +6,11 @@
 class ForestState : public State
 {
 public:
-
 	ForestState(Player* p);
-
 	// Inherited via State
 	virtual void Update() override;
 	virtual State* ChangeState() override;
 
 private:
-	
 };
 

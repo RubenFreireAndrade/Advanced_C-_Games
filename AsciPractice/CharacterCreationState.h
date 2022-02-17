@@ -1,15 +1,19 @@
 #pragma once
 #include"State.h"
 #include"FieldState.h"
-
 #include<vector>
 #include<algorithm>
+#include<memory>
 
-class CharacterCreationState: public State
+class CharacterCreationState : public State
 {
-
 public:
+	// Inherited via State
+	virtual void Update() override;
+	virtual State* ChangeState() override;
 
+	CharacterCreationState();
+	~CharacterCreationState();
 	enum CharacterNames
 	{
 		SWORDSMAN,
@@ -17,19 +21,10 @@ public:
 		ROGUE
 	};
 
-	CharacterCreationState();
-	~CharacterCreationState();
-
-	// Inherited via State
-	virtual void Update() override;
-	virtual State* ChangeState() override;
-
 	void ShowCharacterStats();
 	int ConvertString(std::string choice);
 
-
 private:
-
 	std::vector<Character*> characters;
 	std::vector<Character*>::iterator iter;
 

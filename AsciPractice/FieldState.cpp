@@ -20,13 +20,12 @@ void FieldState::Update()
 	std::cout << "===========================================" << std::endl;
 	std::cout << "You are on a Field." << std::endl;
 	std::cout << "===========================================" << std::endl;
-
+	//=================================================================================================
 	std::cout << "Looks around and spots a Path. Do you take it?" << std::endl;
 	std::cout << "===========================================" << std::endl;
 	std::cout << "1. Yes" << std::endl;
 	std::cout << "2. No" << std::endl;
 	std::cin >> playerChoice;
-
 	ClearScreen();
 	std::cout << "Seems like nothing is here!" << std::endl;
 	std::cout << "========================================" << std::endl;

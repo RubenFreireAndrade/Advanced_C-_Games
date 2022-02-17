@@ -9,7 +9,6 @@ void StateManager::Update()
 {
 	// Updating current active state.
 	currentState->Update();
-
 	// Checking if any global command like 'inventory' is called.
 	State* nextState = currentState->GlobalChangeState();
 	// if global command is not called. Then checking if condition to change state.

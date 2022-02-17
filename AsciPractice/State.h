@@ -8,12 +8,11 @@
 #include<stdlib.h>
 #include<time.h>
 #include<iostream>
+#include<memory>
 
 class State
 {
-
 public:
-
 	virtual void Update() = 0;
 	virtual State* ChangeState() = 0;
 
@@ -27,7 +26,6 @@ public:
 	bool IsStatePlayerAlive();
 
 protected:
-
 	std::string playerChoice;
 
 	BattleSystem* battleSystem;

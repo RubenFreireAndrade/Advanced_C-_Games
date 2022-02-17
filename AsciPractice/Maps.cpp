@@ -18,9 +18,7 @@ void Maps::Load(std::string mapName)
 {
 	std::ifstream fileStream;
 	fileStream.open(mapName + ".txt", std::ios::in);
-
 	char c;
-
 	int currentWidth = 0;
 	int maxWidth = 0;
 	height = 1;
@@ -42,40 +40,29 @@ void Maps::Load(std::string mapName)
 			currentWidth = 0;
 		}
 	}
-
 	width = maxWidth;
-
 	picture = new char[width * height];
-
 	fileStream.clear();
 	fileStream.seekg(0);
 
 	int x = 0, y = 0;
-
 	picture[width * height - 1] = ' ';
 
 	while (!fileStream.eof())
 	{
 		fileStream.get(c);
-
 		int index = y * width + x;
 		x++;
-
 		picture[index] = c;
-
 		if (c == '\n')
 		{
 			picture[index] = ' ';
-
 			while (x < width)
 			{
 				index = y * width + x;
-
 				picture[index] = ' ';
-
 				x++;
 			}
-
 			y++;
 			x = 0;
 		}

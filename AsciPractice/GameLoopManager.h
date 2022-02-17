@@ -12,17 +12,13 @@
 
 class GameLoopManager
 {
-
 public:
-
 	GameLoopManager();
 	~GameLoopManager();
 
 	void GameLoop();
 	std::string SetCmdColour(const char* systemColour);
-
 	bool isGameRunning = true;
-
 private:
 	StateManager* stateManager;
 };

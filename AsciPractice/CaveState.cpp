@@ -16,17 +16,16 @@ void CaveState::Update()
 	enemy->ShowEnemy();
 	std::cout << "Player has: " << player->currentHp << "HP left" << std::endl;
 	FightChoices();
-
 	if (playerChoice == "1")
 	{
 		battleSystem->Battle(enemy, player);
 		PauseGameplay();
-
+		//=================================================================================================
 		ClearScreen();
 		std::cout << enemy->GetEnemyName() << " dropped a HP Potion and Player receives Potion" << std::endl;
 		player->Pickup("Potion");
 		std::cout <<"Player has: "<< player->currentHp << "HP left" << std::endl;
-
+		//=================================================================================================
 		std::cout << "Would you like to use HP Potion?" << std::endl;
 		std::cout << " Yes" << std::endl;
 		std::cout << " No" << std::endl;
@@ -41,7 +40,7 @@ void CaveState::Update()
 			std::cout << "Player has: " << player->currentHp << " left" << std::endl;
 		}
 		PauseGameplay();
-
+		//=================================================================================================
 		SpottingHoodedMan();
 		if (playerChoice == "Yes" || playerChoice == "yes")
 		{

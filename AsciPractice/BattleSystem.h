@@ -11,14 +11,12 @@
 class BattleSystem
 {
 public:
-
 	BattleSystem();
 	~BattleSystem();
 
 	bool Battle(Enemy* enemy, Player* player);
 
 private:
-
 	Enemy* enemy;
 	Player* player;
 };

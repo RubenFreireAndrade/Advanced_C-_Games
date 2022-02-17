@@ -7,7 +7,6 @@ GameLoopManager::GameLoopManager()
 	State* firstState = new CharacterCreationState();
 	// Passing to StateManager.
 	stateManager = new StateManager(firstState);
-
 	// Assigning the Command Line text colour. Change to your liking.
 	SetCmdColour("Color B");
 }
