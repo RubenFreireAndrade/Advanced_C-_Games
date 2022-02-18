@@ -32,7 +32,7 @@ void Enemy::ReceiveDamage(int dmg)
 
 bool Enemy::IsAlive()
 {
-	return currentHP > 0;
+	return currentHP > zeroHealth;
 }
 
 int Enemy::GetEnemyHealth()

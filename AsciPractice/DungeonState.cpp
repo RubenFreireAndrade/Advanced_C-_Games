@@ -15,7 +15,7 @@ void DungeonState::Update()
     Enemy* enemy = CreateEnemy();
     enemy->ShowEnemy();
     FightChoices();
-    if (playerChoice == "1")
+    if (playerChoice == choiceOne)
     {
         battleSystem->Battle(enemy, player);
         ClearScreen();
@@ -27,7 +27,7 @@ void DungeonState::Update()
 
 State* DungeonState::ChangeState()
 {
-    if (playerChoice == "1")
+    if (playerChoice == choiceOne)
     {
         return new VillageState(player);
     }

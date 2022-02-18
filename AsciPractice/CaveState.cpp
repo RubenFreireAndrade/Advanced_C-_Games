@@ -16,7 +16,7 @@ void CaveState::Update()
 	enemy->ShowEnemy();
 	std::cout << "Player has: " << player->currentHp << "HP left" << std::endl;
 	FightChoices();
-	if (playerChoice == "1")
+	if (playerChoice == choiceOne)
 	{
 		battleSystem->Battle(enemy, player);
 		PauseGameplay();
@@ -48,14 +48,16 @@ void CaveState::Update()
 		}
 		else if (playerChoice == "No" || playerChoice == "no")
 		{
-
+			std::cout << "You are a bad person!" << std::endl;
+			PauseGameplay();
+			return;
 		}
 	}
-	else if (playerChoice == "2")
+	else if (playerChoice == choiceTwo)
 	{
 		srand(time(0));
-		int runChance = rand() % 6;
-		if (runChance < 3)
+		int runChance = rand() % maxNumber;
+		if (runChance < median)
 		{
 			std::cout << "You ran away!" << std::endl;
 			std::cout << "Try not get caught again!" << std::endl;

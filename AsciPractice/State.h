@@ -27,6 +27,8 @@ public:
 
 protected:
 	std::string playerChoice;
+	std::string choiceOne = "1";
+	std::string choiceTwo = "2";
 
 	BattleSystem* battleSystem;
 	State* previousState;

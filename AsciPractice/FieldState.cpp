@@ -33,11 +33,11 @@ void FieldState::Update()
 
 State* FieldState::ChangeState()
 {
-	if (playerChoice == "1")
+	if (playerChoice == choiceOne)
 	{
 		return new ForestState(player);
 	}
-	else if (playerChoice == "2")
+	else if (playerChoice == choiceTwo)
 	{	
 		return nullptr;
 	}

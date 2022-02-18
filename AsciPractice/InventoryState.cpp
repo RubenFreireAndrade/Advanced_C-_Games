@@ -17,7 +17,7 @@ void InventoryState::Update()
 	std::cout << "2. Use an item" << std::endl;
 	std::cin >> playerChoice;
 
-	if (playerChoice == "2")
+	if (playerChoice == choiceTwo)
 	{
 		ClearScreen();
 		player->ShowPlayerInventory();
@@ -30,7 +30,7 @@ void InventoryState::Update()
 
 State* InventoryState::ChangeState()
 {
-	if (playerChoice == "1")
+	if (playerChoice == choiceOne)
 	{
 		return previousState;
 	}

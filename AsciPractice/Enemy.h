@@ -16,6 +16,7 @@ public:
 	int GetEnemydamage();
 	std::string GetEnemyName();
 
+	int zeroHealth = 0;
 	int health, attackPwr;
 	int damage;
 	int currentHP;

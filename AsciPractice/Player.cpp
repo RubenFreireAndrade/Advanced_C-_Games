@@ -18,7 +18,7 @@ Player::~Player()
 
 bool Player::IsAlive()
 {
-	return currentHp > 0;
+	return currentHp > zeroHealth;
 }
 
 void Player::ReceiveDamage(int dmg)

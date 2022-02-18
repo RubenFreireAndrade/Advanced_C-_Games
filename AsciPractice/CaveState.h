@@ -15,5 +15,7 @@ public:
 	void ApproachingHoodedMan();
 
 private:
+	int maxNumber = 6;
+	int median = 3;
 };
 

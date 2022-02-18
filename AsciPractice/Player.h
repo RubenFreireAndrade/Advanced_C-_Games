@@ -21,6 +21,7 @@ public:
 	void PickupStarterWeapon(std::string weapon);
 
 private:
+	int zeroHealth = 0;
 	Player* player;
 	Inventory* inventory;
 	Character* character;

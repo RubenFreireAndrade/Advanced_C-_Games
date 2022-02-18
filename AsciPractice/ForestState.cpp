@@ -17,7 +17,7 @@ void ForestState::Update()
 	std::cout << "1. Yes" << std::endl;
 	std::cout << "2. No" << std::endl;
 	std::cin >> playerChoice;
-	if (playerChoice == "1")
+	if (playerChoice == choiceOne)
 	{
 		player->PickupStarterWeapon(player->CheckWeapon());
 	}
@@ -34,7 +34,7 @@ void ForestState::Update()
 
 State* ForestState::ChangeState()
 {
-	if (playerChoice == "1")
+	if (playerChoice == choiceOne)
 	{
 		return new CaveState(player);
 	}
